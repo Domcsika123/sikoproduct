@@ -13,7 +13,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="navbar-logo">
-          <img src="images/logo.png" alt="SikoProduct KFT. logó">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT. logó">
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Főoldal</a></li>
@@ -39,9 +39,9 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Főoldal</a> › Gépeink</div>
-      <h1>Gépparkunk</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Modern és precíziós berendezéseinkkel a legmagasabb minőségi elvárásoknak felelünk meg.</p>
+      <div class="breadcrumb anim anim-fade"><a href="index.html">Főoldal</a> › Gépeink</div>
+      <h1 class="anim anim-fade" style="--d:0.08s">Gépparkunk</h1>
+      <p class="anim anim-fade" style="--d:0.16s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Modern és precíziós berendezéseinkkel a legmagasabb minőségi elvárásoknak felelünk meg.</p>
     </div>
   </section>
 
@@ -62,8 +62,8 @@
       <div class="divider"></div>
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-      <div class="machines-grid">
-        <div class="machine-card">
+      <div class="machines-grid" data-stagger="0.1">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img">🔧</div>
           <div class="machine-info">
             <h3>Lorem Ipsum CNC 1000</h3>
@@ -76,7 +76,7 @@
             </div>
           </div>
         </div>
-        <div class="machine-card">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img">⚙️</div>
           <div class="machine-info">
             <h3>Lorem Ipsum CNC 2000</h3>
@@ -89,7 +89,7 @@
             </div>
           </div>
         </div>
-        <div class="machine-card">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img">🛠️</div>
           <div class="machine-info">
             <h3>Lorem Ipsum Pro 3000</h3>
@@ -113,8 +113,8 @@
       <div class="divider"></div>
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-      <div class="machines-grid">
-        <div class="machine-card">
+      <div class="machines-grid" data-stagger="0.1">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142);">⚡</div>
           <div class="machine-info">
             <h3>Lorem Esztergapad 500</h3>
@@ -126,7 +126,7 @@
             </div>
           </div>
         </div>
-        <div class="machine-card">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142);">🔩</div>
           <div class="machine-info">
             <h3>Lorem Esztergapad 800</h3>
@@ -138,7 +138,7 @@
             </div>
           </div>
         </div>
-        <div class="machine-card">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142);">🏭</div>
           <div class="machine-info">
             <h3>Lorem Esztergapad 1200</h3>
@@ -161,8 +161,8 @@
       <div class="divider"></div>
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-      <div class="machines-grid">
-        <div class="machine-card">
+      <div class="machines-grid" data-stagger="0.1">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel));">📏</div>
           <div class="machine-info">
             <h3>Lorem Mérőgép</h3>
@@ -173,7 +173,7 @@
             </div>
           </div>
         </div>
-        <div class="machine-card">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel));">🔬</div>
           <div class="machine-info">
             <h3>Lorem Minőségellenőrzés</h3>
@@ -184,7 +184,7 @@
             </div>
           </div>
         </div>
-        <div class="machine-card">
+        <div class="machine-card anim anim-fade">
           <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel));">🔥</div>
           <div class="machine-info">
             <h3>Lorem Felületkezelő</h3>
@@ -215,7 +215,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="SikoProduct KFT.">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT.">
           <p>Fém nagykereskedelem & CNC alkatrészgyártás. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="footer-col">
@@ -252,10 +252,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('open');
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="navbar-logo">
-          <img src="images/logo.png" alt="SikoProduct KFT. logó">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT. logó">
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Főoldal</a></li>
@@ -39,9 +39,9 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Főoldal</a> › Szolgáltatások</div>
-      <h1>Szolgáltatásaink</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fedezze fel átfogó fémipari és CNC megmunkálási megoldásainkat.</p>
+      <div class="breadcrumb anim anim-fade"><a href="index.html">Főoldal</a> › Szolgáltatások</div>
+      <h1 class="anim anim-fade" style="--d:0.08s">Szolgáltatásaink</h1>
+      <p class="anim anim-fade" style="--d:0.16s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fedezze fel átfogó fémipari és CNC megmunkálási megoldásainkat.</p>
     </div>
   </section>
 
@@ -58,10 +58,10 @@
   <!-- SERVICES LIST -->
   <section class="section section-alt">
     <div class="container">
-      <div class="cards-grid">
+      <div class="cards-grid" data-stagger="0.12">
 
         <!-- Service 1 -->
-        <div class="card">
+        <div class="card anim anim-fade">
           <div class="card-icon">⚙️</div>
           <h3>Szolgáltatás 1</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
@@ -74,7 +74,7 @@
         </div>
 
         <!-- Service 2 -->
-        <div class="card">
+        <div class="card anim anim-fade">
           <div class="card-icon">🔩</div>
           <h3>Szolgáltatás 2</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
@@ -87,7 +87,7 @@
         </div>
 
         <!-- Service 3 -->
-        <div class="card">
+        <div class="card anim anim-fade">
           <div class="card-icon">🏭</div>
           <h3>Szolgáltatás 3</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.</p>
@@ -109,23 +109,23 @@
       <h2 class="section-title">Miért bízzon bennünk?</h2>
       <div class="divider"></div>
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-      <div class="values-grid">
-        <div class="value-card">
+      <div class="values-grid" data-stagger="0.1">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">⏱️</div>
           <h3>Gyors átfutás</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">📐</div>
           <h3>Pontos kivitelezés</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">💰</div>
           <h3>Versenyképes árak</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">🛡️</div>
           <h3>Minőséggarancia</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor.</p>
@@ -150,7 +150,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="SikoProduct KFT.">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT.">
           <p>Fém nagykereskedelem & CNC alkatrészgyártás. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="footer-col">
@@ -187,10 +187,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('open');
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

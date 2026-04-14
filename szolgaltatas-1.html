@@ -13,7 +13,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="navbar-logo">
-          <img src="images/logo.png" alt="SikoProduct KFT. logó">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT. logó">
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Főoldal</a></li>
@@ -39,11 +39,11 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb">
+      <div class="breadcrumb anim anim-fade">
         <a href="index.html">Főoldal</a> › <a href="szolgaltatasok.html">Szolgáltatások</a> › Szolgáltatás 1
       </div>
-      <h1>Szolgáltatás 1</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <h1 class="anim anim-fade" style="--d:0.08s">Szolgáltatás 1</h1>
+      <p class="anim anim-fade" style="--d:0.16s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
     </div>
   </section>
 
@@ -129,14 +129,14 @@
       <h2 class="section-title">Egyéb szolgáltatásaink</h2>
       <div class="divider"></div>
       <br>
-      <div class="cards-grid">
-        <div class="card">
+      <div class="cards-grid" data-stagger="0.12">
+        <div class="card anim anim-fade">
           <div class="card-icon">🔩</div>
           <h3>Szolgáltatás 2</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
           <a href="szolgaltatas-2.html" class="card-link">Részletek</a>
         </div>
-        <div class="card">
+        <div class="card anim anim-fade">
           <div class="card-icon">🏭</div>
           <h3>Szolgáltatás 3</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.</p>
@@ -151,7 +151,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="SikoProduct KFT.">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT.">
           <p>Fém nagykereskedelem & CNC alkatrészgyártás. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="footer-col">
@@ -188,10 +188,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('open');
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>

@@ -13,7 +13,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="navbar-logo">
-          <img src="images/logo.png" alt="SikoProduct KFT. logó">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT. logó">
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Főoldal</a></li>
@@ -39,9 +39,9 @@
   <!-- PAGE HERO -->
   <section class="page-hero">
     <div class="container">
-      <div class="breadcrumb"><a href="index.html">Főoldal</a> › Rólunk</div>
-      <h1>Rólunk</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ismerjük meg cégünket, értékeinket és hosszú évek tapasztalatát.</p>
+      <div class="breadcrumb anim anim-fade"><a href="index.html">Főoldal</a> › Rólunk</div>
+      <h1 class="anim anim-fade" style="--d:0.08s">Rólunk</h1>
+      <p class="anim anim-fade" style="--d:0.16s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ismerjük meg cégünket, értékeinket és hosszú évek tapasztalatát.</p>
     </div>
   </section>
 
@@ -67,23 +67,23 @@
       <div class="divider"></div>
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-      <div class="values-grid">
-        <div class="value-card">
+      <div class="values-grid" data-stagger="0.1">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">🎯</div>
           <h3>Precizitás</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">🤝</div>
           <h3>Megbízhatóság</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">💡</div>
           <h3>Innováció</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
         </div>
-        <div class="value-card">
+        <div class="value-card anim anim-rotate">
           <div class="value-icon">⭐</div>
           <h3>Minőség</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
@@ -99,28 +99,28 @@
       <div class="divider"></div>
       <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 
-      <div class="timeline">
-        <div class="timeline-item">
+      <div class="timeline" data-stagger="0.1">
+        <div class="timeline-item anim anim-fade-left">
           <div class="year">2008</div>
           <h3>A cég alapítása</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item anim anim-fade-left">
           <div class="year">2012</div>
           <h3>Kapacitásbővítés</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item anim anim-fade-left">
           <div class="year">2016</div>
           <h3>Új technológiák bevezetése</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item anim anim-fade-left">
           <div class="year">2020</div>
           <h3>Piaci bővülés</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
         </div>
-        <div class="timeline-item">
+        <div class="timeline-item anim anim-fade-left">
           <div class="year">2024</div>
           <h3>Lorem ipsum mérföldkő</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
@@ -145,7 +145,7 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo.png" alt="SikoProduct KFT.">
+          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT.">
           <p>Fém nagykereskedelem & CNC alkatrészgyártás. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
         </div>
         <div class="footer-col">
@@ -182,10 +182,6 @@
     </div>
   </footer>
 
-  <script>
-    function toggleMenu() {
-      document.getElementById('navLinks').classList.toggle('open');
-    }
-  </script>
+  <script src="js/main.js"></script>
 </body>
 </html>
