@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kapcsolat – SikoProduct KFT.</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .map-placeholder {
+      background: linear-gradient(135deg, var(--grey-bg), var(--grey-light));
+      border: 2px dashed var(--border);
+      border-radius: var(--radius-lg);
+      height: 300px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-top: 40px;
+    }
+    .map-placeholder span { font-size: 2.5rem; }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <a href="index.html" class="navbar-logo">
+          <img src="images/logo.png" alt="SikoProduct KFT. logó">
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html">Főoldal</a></li>
+          <li><a href="rolunk.html">Rólunk</a></li>
+          <li>
+            <a href="szolgaltatasok.html">Szolgáltatások ▾</a>
+            <ul class="dropdown-menu">
+              <li><a href="szolgaltatas-1.html">Szolgáltatás 1</a></li>
+              <li><a href="szolgaltatas-2.html">Szolgáltatás 2</a></li>
+              <li><a href="szolgaltatas-3.html">Szolgáltatás 3</a></li>
+            </ul>
+          </li>
+          <li><a href="gepeink.html">Gépeink</a></li>
+          <li class="active"><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Főoldal</a> › Kapcsolat</div>
+      <h1>Kapcsolat</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vegye fel velünk a kapcsolatot, szívesen segítünk!</p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="section">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- INFO -->
+        <div>
+          <div class="contact-info">
+            <h2>Elérhetőségeink</h2>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📍</div>
+              <div class="contact-item-text">
+                <strong>Cím</strong>
+                <span>1000 Budapest, Lorem utca 1.<br>Magyarország</span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">📞</div>
+              <div class="contact-item-text">
+                <strong>Telefon</strong>
+                <span><a href="tel:+36000000000" style="color:var(--dark);">+36 00 000 0000</a></span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">✉️</div>
+              <div class="contact-item-text">
+                <strong>E-mail</strong>
+                <span><a href="mailto:info@sikoproduct.hu" style="color:var(--dark);">info@sikoproduct.hu</a></span>
+              </div>
+            </div>
+
+            <div class="contact-item">
+              <div class="contact-item-icon">🕐</div>
+              <div class="contact-item-text">
+                <strong>Nyitvatartás</strong>
+                <span>Hétfő – Péntek: 8:00 – 17:00<br>Szombat–Vasárnap: Zárva</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- MAP PLACEHOLDER -->
+          <div class="map-placeholder">
+            <span>🗺️</span>
+            <p>Térkép itt lesz elhelyezve</p>
+            <small style="font-size:0.82rem;">(Google Maps vagy egyéb térkép beágyazás)</small>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div class="contact-form">
+          <h2 style="font-size:1.5rem; font-weight:700; color:var(--dark); margin-bottom:8px;">Írjon nekünk!</h2>
+          <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Válaszolunk Önnek minél hamarabb.</p>
+
+          <form onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nev">Név *</label>
+                <input type="text" id="nev" name="nev" placeholder="Lorem Ipsum" required>
+              </div>
+              <div class="form-group">
+                <label for="email">E-mail cím *</label>
+                <input type="email" id="email" name="email" placeholder="lorem@ipsum.hu" required>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefon">Telefonszám</label>
+                <input type="tel" id="telefon" name="telefon" placeholder="+36 00 000 0000">
+              </div>
+              <div class="form-group">
+                <label for="tema">Tárgy</label>
+                <select id="tema" name="tema">
+                  <option value="">Válasszon témát...</option>
+                  <option value="s1">Szolgáltatás 1</option>
+                  <option value="s2">Szolgáltatás 2</option>
+                  <option value="s3">Szolgáltatás 3</option>
+                  <option value="gepek">Gépeink</option>
+                  <option value="egyeb">Egyéb</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="uzenet">Üzenet *</label>
+              <textarea id="uzenet" name="uzenet" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." required></textarea>
+            </div>
+
+            <div class="form-group" style="display:flex; align-items:flex-start; gap:10px; margin-bottom:24px;">
+              <input type="checkbox" id="adatkezeles" name="adatkezeles" required style="width:auto; margin-top:3px; flex-shrink:0;">
+              <label for="adatkezeles" style="font-size:0.82rem; font-weight:400; color:var(--text-muted); cursor:pointer;">
+                Elfogadom az <a href="#" style="color:var(--blue);">adatkezelési tájékoztatót</a> és hozzájárulok adataim kezeléséhez. *
+              </label>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width:100%; font-size:1rem;">
+              Üzenet küldése
+            </button>
+          </form>
+
+          <div id="successMsg" style="display:none; margin-top:20px; padding:16px 20px; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:var(--radius); color:#2e7d32; font-size:0.93rem;">
+            ✓ Köszönjük üzenetét! Hamarosan felvesszük Önnel a kapcsolatot.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <img src="images/logo.png" alt="SikoProduct KFT.">
+          <p>Fém nagykereskedelem & CNC alkatrészgyártás. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigáció</h4>
+          <ul>
+            <li><a href="index.html">Főoldal</a></li>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="szolgaltatasok.html">Szolgáltatások</a></li>
+            <li><a href="gepeink.html">Gépeink</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Szolgáltatások</h4>
+          <ul>
+            <li><a href="szolgaltatas-1.html">Szolgáltatás 1</a></li>
+            <li><a href="szolgaltatas-2.html">Szolgáltatás 2</a></li>
+            <li><a href="szolgaltatas-3.html">Szolgáltatás 3</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Elérhetőség</h4>
+          <ul>
+            <li><a href="tel:+36000000000">+36 00 000 0000</a></li>
+            <li><a href="mailto:info@sikoproduct.hu">info@sikoproduct.hu</a></li>
+            <li><a href="#">1000 Budapest, Lorem u. 1.</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2025 SikoProduct KFT. Minden jog fenntartva.</span>
+        <span>Fém Nagykereskedelem & CNC Alkatrészgyártás</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('successMsg').style.display = 'block';
+      e.target.reset();
+      e.target.style.opacity = '0.5';
+      e.target.style.pointerEvents = 'none';
+    }
+  </script>
+</body>
+</html>
