@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Gépeink – SikoProduct KFT.</title>
   <link rel="stylesheet" href="css/style.css">
+  <style>
+    .machine-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 12px;
+      background: var(--grey-100);
+    }
+  </style>
 </head>
 <body>
 
@@ -13,7 +22,7 @@
     <div class="container">
       <nav class="navbar">
         <a href="index.html" class="navbar-logo">
-          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT. logó">
+          <img src="images/Sikoproduct_logo_1-removebg-preview.png" alt="SikoProduct KFT. logó">
         </a>
         <ul class="nav-links" id="navLinks">
           <li><a href="index.html">Főoldal</a></li>
@@ -21,9 +30,9 @@
           <li>
             <a href="szolgaltatasok.html">Szolgáltatások ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="szolgaltatas-1.html">Szolgáltatás 1</a></li>
-              <li><a href="szolgaltatas-2.html">Szolgáltatás 2</a></li>
-              <li><a href="szolgaltatas-3.html">Szolgáltatás 3</a></li>
+              <li><a href="szolgaltatas-1.html">Egyedi alkatrész gyártás</a></li>
+              <li><a href="szolgaltatas-2.html">Széria alkatrész gyártás</a></li>
+              <li><a href="szolgaltatas-3.html">Fém nagykereskedelem</a></li>
             </ul>
           </li>
           <li class="active"><a href="gepeink.html">Gépeink</a></li>
@@ -41,7 +50,7 @@
     <div class="container">
       <div class="breadcrumb anim anim-fade"><a href="index.html">Főoldal</a> › Gépeink</div>
       <h1 class="anim anim-fade" style="--d:0.08s">Gépparkunk</h1>
-      <p class="anim anim-fade" style="--d:0.16s">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Modern és precíziós berendezéseinkkel a legmagasabb minőségi elvárásoknak felelünk meg.</p>
+      <p class="anim anim-fade" style="--d:0.16s">Korszerű technológia a maximális pontosságért – modern gépparkunk biztosítja a magas szintű gyártási minőséget.</p>
     </div>
   </section>
 
@@ -51,54 +60,48 @@
       <h2 class="section-title">Korszerű technológia</h2>
       <div class="divider"></div>
       <br>
-      <p style="color:var(--text-muted);">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+      <p style="color:var(--text-muted);">Modern CNC megmunkálóközpontok és esztergák, precíziós mérőeszközök, valamint köszörű és vágóberendezések – mindez egy helyen, hogy a legszigorúbb műszaki követelményeknek is megfeleljünk.</p>
     </div>
   </section>
 
-  <!-- MACHINES CATEGORY 1 -->
+  <!-- CNC MEGMUNKÁLÓ KÖZPONTOK -->
   <section class="section section-alt">
     <div class="container">
-      <h2 class="section-title">CNC Marógépek</h2>
+      <h2 class="section-title">CNC megmunkáló központok</h2>
       <div class="divider"></div>
-      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="section-subtitle">Nagy fordulatszámú, nagy pontosságú vertikális marás 4. forgótengellyel.</p>
 
       <div class="machines-grid" data-stagger="0.1">
         <div class="machine-card anim anim-fade">
-          <div class="machine-img">🔧</div>
+          <div class="machine-img">
+            <img src="images/Mori Seiki NV 5000 CNC megmunkálóközpont.png" alt="Mori Seiki NV 5000 CNC megmunkálóközpont">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Ipsum CNC 1000</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Mori Seiki NV 5000</h3>
+            <p>Nagy fordulatszámú, nagy pontosságú CNC megmunkálóközpont, orsón keresztüli hűtéssel és 4. forgótengellyel.</p>
             <div class="machine-spec">
-              <span class="spec-tag">X: 1000 mm</span>
-              <span class="spec-tag">Y: 600 mm</span>
-              <span class="spec-tag">Z: 500 mm</span>
-              <span class="spec-tag">5 tengelyes</span>
+              <span class="spec-tag">Asztal: 1000×600 mm</span>
+              <span class="spec-tag">X×Y×Z: 800×500×500 mm</span>
+              <span class="spec-tag">Max. 20 000 rpm</span>
+              <span class="spec-tag">Hűtés 40 bar</span>
+              <span class="spec-tag">4. forgótengely</span>
+              <span class="spec-tag">Pontosság: 0,007 mm</span>
             </div>
           </div>
         </div>
         <div class="machine-card anim anim-fade">
-          <div class="machine-img">⚙️</div>
-          <div class="machine-info">
-            <h3>Lorem Ipsum CNC 2000</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
-            <div class="machine-spec">
-              <span class="spec-tag">X: 2000 mm</span>
-              <span class="spec-tag">Y: 800 mm</span>
-              <span class="spec-tag">Z: 700 mm</span>
-              <span class="spec-tag">3 tengelyes</span>
-            </div>
+          <div class="machine-img">
+            <img src="images/Mori Seiki DuraVertical 5060 CNC megmunkálóközpont.png" alt="Mori Seiki DuraVertical 5060 CNC megmunkálóközpont">
           </div>
-        </div>
-        <div class="machine-card anim anim-fade">
-          <div class="machine-img">🛠️</div>
           <div class="machine-info">
-            <h3>Lorem Ipsum Pro 3000</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Mori Seiki DuraVertical 5060</h3>
+            <p>Precíziós CNC megmunkálóközpont 4. forgótengellyel – ideális egyedi és kis sorozatú alkatrészekhez.</p>
             <div class="machine-spec">
-              <span class="spec-tag">X: 1500 mm</span>
-              <span class="spec-tag">Y: 700 mm</span>
-              <span class="spec-tag">Z: 600 mm</span>
-              <span class="spec-tag">4 tengelyes</span>
+              <span class="spec-tag">Asztal: 900×600 mm</span>
+              <span class="spec-tag">X×Y×Z: 600×500×500 mm</span>
+              <span class="spec-tag">Max. 10 000 rpm</span>
+              <span class="spec-tag">4. forgótengely</span>
+              <span class="spec-tag">Pontosság: 0,005 mm</span>
             </div>
           </div>
         </div>
@@ -106,47 +109,61 @@
     </div>
   </section>
 
-  <!-- MACHINES CATEGORY 2 -->
+  <!-- CNC ESZTERGÁK -->
   <section class="section">
     <div class="container">
-      <h2 class="section-title">CNC Esztergák</h2>
+      <h2 class="section-title">CNC esztergák</h2>
       <div class="divider"></div>
-      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="section-subtitle">Komplex megmunkálás Y tengellyel, hajtott szerszámokkal és száladagolóval.</p>
 
       <div class="machines-grid" data-stagger="0.1">
         <div class="machine-card anim anim-fade">
-          <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142);">⚡</div>
+          <div class="machine-img">
+            <img src="images/Mori Seiki Nl1500 SY CNC eszterga.png" alt="Mori Seiki NL1500 SY CNC eszterga">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Esztergapad 500</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Mori Seiki NL1500 SY</h3>
+            <p>Komplex megmunkálású CNC eszterga Y tengellyel és ellenorsóval, 12 hajtott szerszámmal.</p>
             <div class="machine-spec">
-              <span class="spec-tag">Ø500 mm</span>
-              <span class="spec-tag">L: 1500 mm</span>
-              <span class="spec-tag">CNC vezérlés</span>
+              <span class="spec-tag">Ø max: 260 mm</span>
+              <span class="spec-tag">L max: 580 mm</span>
+              <span class="spec-tag">Y mozgás ±60 mm</span>
+              <span class="spec-tag">Ellenorsó</span>
+              <span class="spec-tag">12 hajtott szerszám</span>
+              <span class="spec-tag">6000 rpm</span>
+              <span class="spec-tag">Pontosság: 0,005 mm</span>
             </div>
           </div>
         </div>
         <div class="machine-card anim anim-fade">
-          <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142);">🔩</div>
+          <div class="machine-img">
+            <img src="images/Mori Seiki Nl2000 Y CNC eszterga.png" alt="Mori Seiki NL2000 Y CNC eszterga">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Esztergapad 800</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Mori Seiki NL2000 Y</h3>
+            <p>Nagyobb darabokhoz, szegnyereggel, Y tengellyel, 12 hajtott szerszámmal – száladagolóval kiegészítve sorozatgyártásra is ideális.</p>
             <div class="machine-spec">
-              <span class="spec-tag">Ø800 mm</span>
-              <span class="spec-tag">L: 3000 mm</span>
-              <span class="spec-tag">CNC vezérlés</span>
+              <span class="spec-tag">Ø max: 350 mm</span>
+              <span class="spec-tag">L max: 610 mm</span>
+              <span class="spec-tag">Y mozgás ±60 mm</span>
+              <span class="spec-tag">Szegnyereg</span>
+              <span class="spec-tag">12 hajtott szerszám</span>
+              <span class="spec-tag">6000 rpm</span>
+              <span class="spec-tag">Pontosság: 0,005 mm</span>
             </div>
           </div>
         </div>
         <div class="machine-card anim anim-fade">
-          <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142);">🏭</div>
+          <div class="machine-img">
+            <img src="images/Kurt Breuning Profimat száladagoló.png" alt="Kurt Breuning Profimat száladagoló">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Esztergapad 1200</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Kurt Breuning Profimat száladagoló</h3>
+            <p>A Mori Seiki NL2000 Y eszterga száladagoló kiegészítője – folyamatos rúdadagolás hosszú szériák gyártásához.</p>
             <div class="machine-spec">
-              <span class="spec-tag">Ø1200 mm</span>
-              <span class="spec-tag">L: 4000 mm</span>
-              <span class="spec-tag">CNC vezérlés</span>
+              <span class="spec-tag">Max. rúdhossz: 3200 mm</span>
+              <span class="spec-tag">Rúdátmérő: 10–65 mm</span>
+              <span class="spec-tag">6 csatorna</span>
             </div>
           </div>
         </div>
@@ -154,44 +171,143 @@
     </div>
   </section>
 
-  <!-- MACHINES CATEGORY 3 -->
+  <!-- MÉRŐESZKÖZÖK -->
   <section class="section section-alt">
     <div class="container">
-      <h2 class="section-title">Egyéb berendezések</h2>
+      <h2 class="section-title">Mérőeszközök</h2>
       <div class="divider"></div>
-      <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="section-subtitle">Pontos minőségellenőrzés akár 0,001 mm pontossággal.</p>
 
       <div class="machines-grid" data-stagger="0.1">
         <div class="machine-card anim anim-fade">
-          <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel));">📏</div>
+          <div class="machine-img">
+            <img src="images/Tesa Micro Hite 3D koordináta-mérőgép.png" alt="Tesa Micro Hite 3D koordináta-mérőgép">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Mérőgép</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Tesa Micro Hite 3D</h3>
+            <p>Koordináta-mérőgép a legmagasabb pontossági igények kiszolgálására – sorozatok és prototípusok ellenőrzéséhez.</p>
             <div class="machine-spec">
-              <span class="spec-tag">3D mérés</span>
-              <span class="spec-tag">±0.001 mm</span>
+              <span class="spec-tag">X×Y×Z: 460×710×420 mm</span>
+              <span class="spec-tag">Pontosság: 0,001 mm</span>
             </div>
           </div>
         </div>
         <div class="machine-card anim anim-fade">
-          <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel));">🔬</div>
+          <div class="machine-img">
+            <img src="images/Mitutoyo LH600-E 2D magasságmérő gép.png" alt="Mitutoyo LH600-E 2D magasságmérő">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Minőségellenőrzés</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>Mitutoyo LH600-E</h3>
+            <p>2D magasságmérő gép, gyors és pontos méretellenőrzéshez közvetlenül a gyártósor mellett.</p>
             <div class="machine-spec">
-              <span class="spec-tag">Optikai mérés</span>
-              <span class="spec-tag">Digitális</span>
+              <span class="spec-tag">Mérési magasság: 0–972 mm</span>
+              <span class="spec-tag">Pontosság: 0,001 mm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- KÖSZÖRŰ ÉS VÁGÓ -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Köszörű és vágó berendezések</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Kiegészítő technológiák a komplett megmunkáláshoz.</p>
+
+      <div class="machines-grid" data-stagger="0.1">
+        <div class="machine-card anim anim-fade">
+          <div class="machine-img" style="background:linear-gradient(135deg,#1a3a6b,#2d3142); color:#fff; font-size:2rem;">⚙️</div>
+          <div class="machine-info">
+            <h3>Jakobsen SJ 824 síkköszörű</h3>
+            <p>Síkköszörű precíziós felületi finommegmunkáláshoz – mágneses asztalrögzítéssel.</p>
+            <div class="machine-spec">
+              <span class="spec-tag">Mágnesasztal: 600×200 mm</span>
+              <span class="spec-tag">Max. munkadarab: 600×250×400 mm</span>
+              <span class="spec-tag">Max. 200 kg</span>
+              <span class="spec-tag">Főorsó: 2,2 kW</span>
             </div>
           </div>
         </div>
         <div class="machine-card anim anim-fade">
-          <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel));">🔥</div>
+          <div class="machine-img">
+            <img src="images/BOMAR 275.230.DG szalagfűrészgép.png" alt="BOMAR 275.230.DG szalagfűrészgép">
+          </div>
           <div class="machine-info">
-            <h3>Lorem Felületkezelő</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna.</p>
+            <h3>BOMAR 275.230.DG szalagfűrész</h3>
+            <p>Pontos és gyors szalagfűrész alapanyag-darabolásra, akár nagyobb keresztmetszetekre is.</p>
             <div class="machine-spec">
-              <span class="spec-tag">Hőkezelés</span>
-              <span class="spec-tag">Bevonat</span>
+              <span class="spec-tag">Vágási szélesség: max. 275 mm</span>
+              <span class="spec-tag">Vágás átmérőben: max. 230 mm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HAGYOMÁNYOS GÉPEK -->
+  <section class="section section-alt">
+    <div class="container">
+      <h2 class="section-title">Hagyományos gépek</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Nagyméretű alkatrészek megmunkálására.</p>
+
+      <div class="machines-grid" data-stagger="0.1">
+        <div class="machine-card anim anim-fade">
+          <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel)); color:#fff; font-size:2rem;">🔧</div>
+          <div class="machine-info">
+            <h3>Stankó IK/63 esztergagép</h3>
+            <p>Hagyományos esztergagép nagyméretű, hosszú alkatrészekhez.</p>
+            <div class="machine-spec">
+              <span class="spec-tag">Max. átmérő: 710 mm</span>
+              <span class="spec-tag">Max. hossz: 3000 mm</span>
+            </div>
+          </div>
+        </div>
+        <div class="machine-card anim anim-fade">
+          <div class="machine-img" style="background:linear-gradient(135deg,#2d3142,var(--steel)); color:#fff; font-size:2rem;">🛠️</div>
+          <div class="machine-info">
+            <h3>Stankó 6T12-1 marógép</h3>
+            <p>Hagyományos marógép – kiegészítő művelet a CNC mellett.</p>
+            <div class="machine-spec">
+              <span class="spec-tag">Asztal: 1000×600 mm</span>
+              <span class="spec-tag">X×Y×Z: 1200×500×300 mm</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- JÁRMŰPARK -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Saját logisztika</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">Saját gépjárműparkunkkal rugalmas kiszállítást biztosítunk.</p>
+
+      <div class="machines-grid" data-stagger="0.1">
+        <div class="machine-card anim anim-fade">
+          <div class="machine-img" style="background:linear-gradient(135deg,var(--blue),var(--blue-light)); color:#fff; font-size:2rem;">🚐</div>
+          <div class="machine-info">
+            <h3>Mercedes eVito dobozos</h3>
+            <p>Elektromos haszongépjármű – gyors, csendes és környezetbarát kiszállítás.</p>
+            <div class="machine-spec">
+              <span class="spec-tag">Évjárat: 2025</span>
+              <span class="spec-tag">Elektromos hajtás</span>
+            </div>
+          </div>
+        </div>
+        <div class="machine-card anim anim-fade">
+          <div class="machine-img" style="background:linear-gradient(135deg,var(--blue),var(--blue-light)); color:#fff; font-size:2rem;">🚚</div>
+          <div class="machine-info">
+            <h3>Mercedes Sprinter 316d</h3>
+            <p>Kisteherautó nagyobb tételek és hosszabb anyagok szállítására.</p>
+            <div class="machine-spec">
+              <span class="spec-tag">Évjárat: 2020</span>
+              <span class="spec-tag">Kisteherautó</span>
             </div>
           </div>
         </div>
@@ -205,7 +321,7 @@
       <h2 class="section-title">Kérdése van gépeinkkel kapcsolatban?</h2>
       <div class="divider"></div>
       <br>
-      <p style="color:rgba(255,255,255,0.65); margin-bottom:28px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus.</p>
+      <p style="color:rgba(255,255,255,0.65); margin-bottom:28px;">Egyeztessen velünk, hogy az Ön rajzához melyik gép és technológia ad optimális megoldást.</p>
       <a href="kapcsolat.html" class="btn btn-primary">Kapcsolatfelvétel</a>
     </div>
   </section>
@@ -215,8 +331,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-          <img src="images/logo-removebg-preview.png" alt="SikoProduct KFT.">
-          <p>Fém nagykereskedelem & CNC alkatrészgyártás. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <img src="images/Sikoproduct_logo_1-removebg-preview.png" alt="SikoProduct KFT.">
+          <p>Fém nagykereskedelem és CNC alkatrészgyártás – megbízható partner az iparban.</p>
         </div>
         <div class="footer-col">
           <h4>Navigáció</h4>
@@ -231,17 +347,17 @@
         <div class="footer-col">
           <h4>Szolgáltatások</h4>
           <ul>
-            <li><a href="szolgaltatas-1.html">Szolgáltatás 1</a></li>
-            <li><a href="szolgaltatas-2.html">Szolgáltatás 2</a></li>
-            <li><a href="szolgaltatas-3.html">Szolgáltatás 3</a></li>
+            <li><a href="szolgaltatas-1.html">Egyedi alkatrész gyártás</a></li>
+            <li><a href="szolgaltatas-2.html">Széria alkatrész gyártás</a></li>
+            <li><a href="szolgaltatas-3.html">Fém nagykereskedelem</a></li>
           </ul>
         </div>
         <div class="footer-col">
           <h4>Elérhetőség</h4>
           <ul>
-            <li><a href="tel:+36000000000">+36 00 000 0000</a></li>
-            <li><a href="mailto:info@sikoproduct.hu">info@sikoproduct.hu</a></li>
-            <li><a href="#">1000 Budapest, Lorem u. 1.</a></li>
+            <li><a href="tel:+36306180385">+36 30 618 0385</a></li>
+            <li><a href="mailto:sikoproduct@gmail.com">sikoproduct@gmail.com</a></li>
+            <li>2142 Nagytarcsa,<br>Neumann János u. 5.</li>
           </ul>
         </div>
       </div>
