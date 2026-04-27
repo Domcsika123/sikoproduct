@@ -37,15 +37,31 @@
   backface-visibility: hidden;
 }
 
-.anim-fade       { transform: translateY(30px); }
-.anim-fade-left  { transform: translateX(-44px); }
-.anim-fade-right { transform: translateX(44px); }
-.anim-zoom       { transform: scale(0.88); }
-.anim-rotate     { transform: rotate(-8deg) scale(0.9); }
+.anim-fade {
+  transform: translateY(30px);
+}
+
+.anim-fade-left {
+  transform: translateX(-44px);
+}
+
+.anim-fade-right {
+  transform: translateX(44px);
+}
+
+.anim-zoom {
+  transform: scale(0.88);
+}
+
+.anim-rotate {
+  transform: rotate(-8deg) scale(0.9);
+}
+
 .anim-flip {
   transform: perspective(900px) rotateY(-75deg);
   transform-origin: center;
 }
+
 .anim-flip-x {
   transform: perspective(900px) rotateX(60deg);
   transform-origin: top center;
@@ -1278,6 +1294,7 @@ textarea {
 
   .dropdown-menu {
     position: static;
+    display: none;
     opacity: 1;
     visibility: visible;
     transform: none;
@@ -1288,6 +1305,10 @@ textarea {
     padding: 4px 0;
     margin: 4px 0 4px 16px;
     border-radius: 0;
+  }
+
+  .nav-links>li.open>.dropdown-menu {
+    display: block;
   }
 
   .hero-content h1 {
