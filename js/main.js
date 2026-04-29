@@ -2,18 +2,24 @@
   'use strict';
 
   const nav = document.getElementById('navLinks');
+  const hamburger = document.getElementById('hamburger');
   const dropdownParents = nav ? Array.from(nav.querySelectorAll(':scope > li')).filter((li) => li.querySelector('.dropdown-menu')) : [];
 
   const closeMobileDropdowns = function () {
     dropdownParents.forEach((li) => li.classList.remove('open'));
   };
 
+  const setMenuState = function (open) {
+    if (!nav) return;
+    nav.classList.toggle('open', open);
+    if (hamburger) hamburger.classList.toggle('open', open);
+    document.body.classList.toggle('menu-open', open);
+    if (!open) closeMobileDropdowns();
+  };
+
   window.toggleMenu = function () {
     if (!nav) return;
-    nav.classList.toggle('open');
-    if (!nav.classList.contains('open')) {
-      closeMobileDropdowns();
-    }
+    setMenuState(!nav.classList.contains('open'));
   };
 
   dropdownParents.forEach((li) => {
@@ -37,8 +43,7 @@
   window.addEventListener('resize', function () {
     if (!nav) return;
     if (window.innerWidth > 768) {
-      nav.classList.remove('open');
-      closeMobileDropdowns();
+      setMenuState(false);
     }
   });
 
