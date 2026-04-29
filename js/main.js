@@ -44,6 +44,62 @@
 
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  // ---------- Auto-anim: add reveal classes to un-animated section content ----------
+  // Selectors of "content" elements that should fade in.
+  const autoAnimSelectors = [
+    'h1', 'h2', 'h3', 'h4',
+    'p',
+    '.divider',
+    '.section-label',
+    '.section-title',
+    '.section-subtitle',
+    '.btn',
+    '.card',
+    '.dark-card',
+    '.value-card',
+    '.machine-card',
+    '.timeline-item',
+    '.about-img',
+    '.about-img-placeholder',
+    '.text-block',
+    '.contact-info',
+    '.contact-form',
+    '.stat-item',
+    '.feature-list',
+    '.check-list',
+    'ul.feature-list > li',
+    'ul.check-list > li',
+    'img'
+  ].join(',');
+
+  const isInsideAnim = (el) => {
+    let p = el.parentElement;
+    while (p && p !== document.body) {
+      if (p.classList && p.classList.contains('anim')) return true;
+      p = p.parentElement;
+    }
+    return false;
+  };
+
+  document.querySelectorAll('section, .stats-bar, footer').forEach((section) => {
+    const candidates = section.querySelectorAll(autoAnimSelectors);
+    let i = 0;
+    candidates.forEach((el) => {
+      if (el.classList.contains('anim')) return;
+      if (isInsideAnim(el)) return;
+      // Skip purely decorative / already-handled wrappers
+      if (el.closest('header')) return;
+
+      el.classList.add('anim', 'anim-fade');
+      // Stagger only if no inline delay has been set
+      if (!el.style.getPropertyValue('--d')) {
+        const delay = Math.min(i * 0.06, 0.42);
+        if (delay > 0) el.style.setProperty('--d', delay.toFixed(2) + 's');
+      }
+      i++;
+    });
+  });
+
   // ---------- Scroll-reveal animations ----------
   const revealEls = document.querySelectorAll('.anim');
   if (revealEls.length) {
