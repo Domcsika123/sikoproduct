@@ -120,6 +120,7 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   overflow-y: scroll;
+  overflow-x: hidden;
   scroll-padding-top: 72px;
 }
 
@@ -129,6 +130,16 @@ body {
   background: var(--white);
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+img, svg, video {
+  max-width: 100%;
 }
 
 img {
@@ -915,11 +926,11 @@ footer {
   border: 1px solid var(--grey-200);
   transition: var(--transition);
   background: var(--white);
-  box-shadow: 0 6px 20px rgba(26, 58, 107, 0.12);
+  box-shadow: 0 10px 28px rgba(30, 95, 181, 0.28), 0 4px 10px rgba(30, 95, 181, 0.18);
 }
 
 .machine-card:hover {
-  box-shadow: 0 10px 28px rgba(26, 58, 107, 0.22);
+  box-shadow: 0 16px 40px rgba(30, 95, 181, 0.4), 0 6px 14px rgba(30, 95, 181, 0.25);
   transform: translateY(-3px);
 }
 
