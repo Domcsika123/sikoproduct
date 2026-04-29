@@ -5,9 +5,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  --black: #1a2228;
-  --charcoal: #293338;
-  --grey-800: #2d3040;
+  --black: #0f1a2b;
+  --charcoal: #16243d;
+  --grey-800: #1e2c45;
   --grey-600: #4b5563;
   --grey-500: #6b7280;
   --grey-300: #d1d5db;
@@ -15,15 +15,38 @@
   --grey-100: #f3f4f6;
   --grey-50: #f9fafb;
   --white: #ffffff;
-  --accent: #0891b2;
-  --accent-light: #06b6d4;
+  --accent: #1e5fb5;
+  --accent-light: #3b82f6;
+  --accent-dark: #143f80;
   --radius: 3px;
   --radius-md: 6px;
   --radius-lg: 10px;
   --transition: 0.2s ease;
-  --shadow-sm: 0 1px 4px rgba(0, 0, 0, 0.08);
-  --shadow: 0 2px 16px rgba(0, 0, 0, 0.10);
-  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.14);
+  --shadow-sm: 0 1px 4px rgba(15, 26, 43, 0.08);
+  --shadow: 0 2px 16px rgba(15, 26, 43, 0.10);
+  --shadow-lg: 0 8px 40px rgba(15, 26, 43, 0.16);
+}
+
+/* ---------- Page entrance ---------- */
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+body {
+  animation: pageEnter 0.7s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body {
+    animation: none;
+  }
 }
 
 /* ---------- Scroll-reveal animations ---------- */
@@ -814,9 +837,32 @@ footer {
 
 /* ---------- PAGE HERO ---------- */
 .page-hero {
-  background: var(--charcoal);
-  padding: 72px 0 56px;
+  background:
+    radial-gradient(1200px 400px at 20% 0%, rgba(59, 130, 246, 0.22), transparent 70%),
+    radial-gradient(900px 380px at 90% 100%, rgba(30, 95, 181, 0.28), transparent 70%),
+    linear-gradient(135deg, var(--black) 0%, var(--charcoal) 60%, var(--accent-dark) 100%);
+  padding: 78px 0 60px;
   color: var(--white);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--accent);
+}
+
+.page-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(-45deg,
+    rgba(255, 255, 255, 0.025) 0px,
+    rgba(255, 255, 255, 0.025) 1px,
+    transparent 1px,
+    transparent 22px);
+  pointer-events: none;
+}
+
+.page-hero > .container {
+  position: relative;
+  z-index: 1;
 }
 
 .page-hero h1 {
@@ -828,7 +874,7 @@ footer {
 
 .page-hero p {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.55);
+  color: rgba(255, 255, 255, 0.7);
   max-width: 560px;
 }
 
