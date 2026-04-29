@@ -951,8 +951,15 @@ footer {
 }
 
 @media (max-width: 600px) {
+  .machines-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
   .machine-card {
     flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    margin: 0 auto;
   }
   .machine-img {
     flex: 0 0 auto;
