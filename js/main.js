@@ -12,7 +12,24 @@
   const setMenuState = function (open) {
     if (!nav) return;
     nav.classList.toggle('open', open);
-    if (hamburger) hamburger.classList.toggle('open', open);
+    if (hamburger) {
+      hamburger.classList.toggle('open', open);
+      hamburger.style.position = 'relative';
+      hamburger.style.width = '32px';
+      hamburger.style.height = '32px';
+      const spans = hamburger.querySelectorAll('span');
+      if (spans.length >= 3) {
+        if (open) {
+          spans[0].style.cssText = 'position:absolute !important; top:15px !important; left:4px !important; width:24px !important; height:2px !important; background: var(--charcoal, #16243d) !important; border-radius:1px !important; margin:0 !important; transform: rotate(45deg) !important; transform-origin: center !important; transition: transform 0.3s ease, top 0.3s ease, opacity 0.2s ease !important;';
+          spans[1].style.cssText = 'position:absolute !important; top:15px !important; left:4px !important; width:24px !important; height:2px !important; background: var(--charcoal, #16243d) !important; border-radius:1px !important; margin:0 !important; opacity: 0 !important; transform: scaleX(0) !important; transition: transform 0.3s ease, opacity 0.2s ease !important;';
+          spans[2].style.cssText = 'position:absolute !important; top:15px !important; left:4px !important; width:24px !important; height:2px !important; background: var(--charcoal, #16243d) !important; border-radius:1px !important; margin:0 !important; transform: rotate(-45deg) !important; transform-origin: center !important; transition: transform 0.3s ease, top 0.3s ease, opacity 0.2s ease !important;';
+        } else {
+          spans[0].style.cssText = '';
+          spans[1].style.cssText = '';
+          spans[2].style.cssText = '';
+        }
+      }
+    }
     document.body.classList.toggle('menu-open', open);
     if (!open) closeMobileDropdowns();
   };
