@@ -176,15 +176,15 @@
           <p style="color:var(--grey-500); font-size:0.92rem; margin-bottom:28px;">Töltse ki az alábbi űrlapot, és 1
             munkanapon belül visszajelzünk.</p>
 
-          <form onsubmit="handleSubmit(event)">
+          <form id="contactForm" action="https://formspree.io/f/xvzlpjab" method="POST" onsubmit="handleSubmit(event)">
             <div class="form-row">
               <div class="form-group">
                 <label for="nev">Név *</label>
-                <input type="text" id="nev" name="nev" placeholder="Lorem Ipsum" required>
+                <input type="text" id="nev" name="nev" placeholder="Kovács János" required>
               </div>
               <div class="form-group">
                 <label for="email">E-mail cím *</label>
-                <input type="email" id="email" name="email" placeholder="lorem@ipsum.hu" required>
+                <input type="email" id="email" name="email" placeholder="kovacs.janos@example.hu" required>
               </div>
             </div>
 
@@ -209,7 +209,7 @@
             <div class="form-group">
               <label for="uzenet">Üzenet *</label>
               <textarea id="uzenet" name="uzenet"
-                placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit..." required></textarea>
+                placeholder="Egyedi alkatrész gyártásával kapcsolatban szeretnék érdeklődni. Mellékelten küldöm a műszaki rajzot..." required></textarea>
             </div>
 
             <div class="form-group" style="display:flex; align-items:flex-start; gap:10px; margin-bottom:24px;">
@@ -230,6 +230,10 @@
           <div id="successMsg"
             style="display:none; margin-top:20px; padding:16px 20px; background:#e8f5e9; border:1px solid #a5d6a7; border-radius:var(--radius); color:#2e7d32; font-size:0.93rem;">
             ✓ Köszönjük üzenetét! Hamarosan felvesszük Önnel a kapcsolatot.
+          </div>
+          <div id="errorMsg"
+            style="display:none; margin-top:20px; padding:16px 20px; background:#ffebee; border:1px solid #ef9a9a; border-radius:var(--radius); color:#c62828; font-size:0.93rem;">
+            ✗ Hiba történt a küldés során. Kérjük próbálja újra később, vagy írjon közvetlenül a <a href="mailto:sikoproduct@gmail.com" style="color:#c62828; text-decoration:underline;">sikoproduct@gmail.com</a> címre.
           </div>
         </div>
 
@@ -281,12 +285,43 @@
 
   <script src="js/main.js"></script>
   <script>
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
       e.preventDefault();
-      document.getElementById('successMsg').style.display = 'block';
-      e.target.reset();
-      e.target.style.opacity = '0.5';
-      e.target.style.pointerEvents = 'none';
+      const form = e.target;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const successMsg = document.getElementById('successMsg');
+      const errorMsg = document.getElementById('errorMsg');
+
+      const originalText = submitBtn.innerHTML;
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = 'Küldés...';
+      if (errorMsg) errorMsg.style.display = 'none';
+
+      try {
+        const response = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { 'Accept': 'application/json' }
+        });
+
+        if (response.ok) {
+          successMsg.style.display = 'block';
+          form.reset();
+          submitBtn.innerHTML = '✓ Elküldve';
+          form.style.opacity = '0.7';
+          form.style.pointerEvents = 'none';
+        } else {
+          throw new Error('Hiba a küldés során');
+        }
+      } catch (err) {
+        if (errorMsg) {
+          errorMsg.style.display = 'block';
+        } else {
+          alert('Hiba történt a küldés során. Kérjük próbálja újra később, vagy írjon közvetlenül a sikoproduct@gmail.com címre.');
+        }
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalText;
+      }
     }
   </script>
 </body>
