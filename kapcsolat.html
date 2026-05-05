@@ -38,8 +38,7 @@
           <li>
             <a href="szolgaltatasok.html">Szolgáltatások ▾</a>
             <ul class="dropdown-menu">
-              <li><a href="szolgaltatas-1.html">Egyedi alkatrész gyártás</a></li>
-              <li><a href="szolgaltatas-2.html">Széria alkatrész gyártás</a></li>
+              <li><a href="szolgaltatas-1.html">CNC alkatrészgyártás</a></li>
               <li><a href="szolgaltatas-3.html">Fém nagykereskedelem</a></li>
             </ul>
           </li>
@@ -96,8 +95,8 @@
                 </svg>
               </div>
               <div class="contact-item-text">
-                <strong>Telephely – Sárospatak</strong>
-                <span>3950 Sárospatak,<br>Nagy L. út 7.</span>
+                <strong>Telephely 1</strong>
+                <span>2142 Nagytarcsa,<br>Neumann János u. 5.</span>
               </div>
             </div>
 
@@ -110,8 +109,8 @@
                 </svg>
               </div>
               <div class="contact-item-text">
-                <strong>CNC megmunkáló üzem – Nagytarcsa</strong>
-                <span>2142 Nagytarcsa,<br>Neumann János u. 5.</span>
+                <strong>Telephely 2</strong>
+                <span>3950 Sárospatak,<br>Nagy Lajos utca 7.</span>
               </div>
             </div>
 
@@ -139,8 +138,8 @@
               </div>
               <div class="contact-item-text">
                 <strong>E-mail</strong>
-                <span><a href="mailto:sikoproduct@gmail.com"
-                    style="color:var(--grey-800);">sikoproduct@gmail.com</a></span>
+                <span><a href="mailto:info@sikoproduct.hu"
+                    style="color:var(--grey-800);">info@sikoproduct.hu</a></span>
               </div>
             </div>
 
@@ -197,8 +196,7 @@
                 <label for="tema">Tárgy</label>
                 <select id="tema" name="tema">
                   <option value="">Válasszon témát...</option>
-                  <option value="egyedi">Egyedi alkatrész gyártás</option>
-                  <option value="szeria">Széria alkatrész gyártás</option>
+                  <option value="cnc">CNC alkatrészgyártás</option>
                   <option value="kereskedelem">Fém nagykereskedelem</option>
                   <option value="gepek">Gépeink</option>
                   <option value="egyeb">Egyéb</option>
@@ -209,7 +207,7 @@
             <div class="form-group">
               <label for="uzenet">Üzenet *</label>
               <textarea id="uzenet" name="uzenet"
-                placeholder="Egyedi alkatrész gyártásával kapcsolatban szeretnék érdeklődni. Mellékelten küldöm a műszaki rajzot..." required></textarea>
+                placeholder="CNC alkatrészgyártással kapcsolatban szeretnék érdeklődni. Mellékelten küldöm a műszaki rajzot..." required></textarea>
             </div>
 
             <div class="form-group" style="display:flex; align-items:flex-start; gap:10px; margin-bottom:24px;">
@@ -233,7 +231,7 @@
           </div>
           <div id="errorMsg"
             style="display:none; margin-top:20px; padding:16px 20px; background:#ffebee; border:1px solid #ef9a9a; border-radius:var(--radius); color:#c62828; font-size:0.93rem;">
-            ✗ Hiba történt a küldés során. Kérjük próbálja újra később, vagy írjon közvetlenül a <a href="mailto:sikoproduct@gmail.com" style="color:#c62828; text-decoration:underline;">sikoproduct@gmail.com</a> címre.
+            ✗ Hiba történt a küldés során. Kérjük próbálja újra később, vagy írjon közvetlenül a <a href="mailto:info@sikoproduct.hu" style="color:#c62828; text-decoration:underline;">info@sikoproduct.hu</a> címre.
           </div>
         </div>
 
@@ -262,8 +260,7 @@
         <div class="footer-col">
           <h4>Szolgáltatások</h4>
           <ul>
-            <li><a href="szolgaltatas-1.html">Egyedi alkatrész gyártás</a></li>
-            <li><a href="szolgaltatas-2.html">Széria alkatrész gyártás</a></li>
+            <li><a href="szolgaltatas-1.html">CNC alkatrészgyártás</a></li>
             <li><a href="szolgaltatas-3.html">Fém nagykereskedelem</a></li>
           </ul>
         </div>
@@ -271,7 +268,7 @@
           <h4>Elérhetőség</h4>
           <ul>
             <li><a href="tel:+36306180385">+36 30 618 0385</a></li>
-            <li><a href="mailto:sikoproduct@gmail.com">sikoproduct@gmail.com</a></li>
+            <li><a href="mailto:info@sikoproduct.hu">info@sikoproduct.hu</a></li>
             <li>2142 Nagytarcsa,<br>Neumann János u. 5.</li>
           </ul>
         </div>
@@ -317,7 +314,7 @@
         if (errorMsg) {
           errorMsg.style.display = 'block';
         } else {
-          alert('Hiba történt a küldés során. Kérjük próbálja újra később, vagy írjon közvetlenül a sikoproduct@gmail.com címre.');
+          alert('Hiba történt a küldés során. Kérjük próbálja újra később, vagy írjon közvetlenül a info@sikoproduct.hu címre.');
         }
         submitBtn.disabled = false;
         submitBtn.innerHTML = originalText;
