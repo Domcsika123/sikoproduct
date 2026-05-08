@@ -1641,3 +1641,142 @@ textarea {
     padding: 56px 0;
   }
 }
+
+/* ---------- Stripes decor (replaces service detail image) ---------- */
+.service-detail-section {
+  overflow-x: clip;
+}
+
+.stripes-decor {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  pointer-events: none;
+  opacity: 1;
+  clip-path: inset(0 -100vw 0 0);
+}
+
+.stripes-decor .stripe {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 8px;
+  background: #1a2744;
+  border-radius: 0;
+  transform-origin: center;
+  transform: translate3d(100vw, 0, 0) rotate(-40deg);
+  transition: transform 1.1s cubic-bezier(0.22, 0.78, 0.22, 1);
+  transition-delay: calc(var(--i, 0) * 140ms);
+  will-change: transform;
+}
+
+.stripes-decor.is-visible .stripe {
+  transform: translate3d(0, 0, 0) rotate(-40deg);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stripes-decor .stripe {
+    transition: none;
+    transform: translate3d(0, 0, 0) rotate(-40deg);
+  }
+}
+
+/* ---------- Blueprint gear decor (CNC service) ---------- */
+.blueprint-decor {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  pointer-events: none;
+  overflow: hidden;
+  opacity: 1;
+}
+
+.blueprint-decor .bp-svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.blueprint-decor .bp-cross,
+.blueprint-decor .bp-center,
+.blueprint-decor .bp-dim {
+  opacity: 0;
+  transition: opacity 0.55s ease-out;
+}
+
+.blueprint-decor .bp-pitch,
+.blueprint-decor .bp-hub,
+.blueprint-decor .bp-hole {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.95s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blueprint-decor .tooth {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transition-delay: calc(0.45s + var(--i, 0) * 100ms);
+}
+
+.blueprint-decor.is-visible .bp-cross {
+  opacity: 1;
+  transition-delay: 0.05s;
+}
+
+.blueprint-decor.is-visible .bp-pitch {
+  stroke-dashoffset: 0;
+  transition-delay: 0.2s;
+}
+
+.blueprint-decor.is-visible .tooth {
+  stroke-dashoffset: 0;
+}
+
+.blueprint-decor.is-visible .bp-hub {
+  stroke-dashoffset: 0;
+  transition-delay: 1.75s;
+}
+
+.blueprint-decor.is-visible .bp-hole {
+  stroke-dashoffset: 0;
+  transition-delay: 1.95s;
+}
+
+.blueprint-decor.is-visible .bp-center {
+  opacity: 1;
+  transition-delay: 2.15s;
+}
+
+.blueprint-decor.is-visible .bp-dim {
+  opacity: 1;
+  transition-delay: 2.2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blueprint-decor .tooth,
+  .blueprint-decor .bp-pitch,
+  .blueprint-decor .bp-hub,
+  .blueprint-decor .bp-hole {
+    transition: none;
+    stroke-dashoffset: 0;
+  }
+  .blueprint-decor .bp-cross,
+  .blueprint-decor .bp-center,
+  .blueprint-decor .bp-dim {
+    transition: none;
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .stripes-decor {
+    aspect-ratio: 16 / 9;
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .blueprint-decor {
+    aspect-ratio: 16 / 10;
+    max-width: 540px;
+    margin: 0 auto;
+  }
+}
