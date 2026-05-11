@@ -778,6 +778,11 @@ header {
       transparent 22px);
 }
 
+.about-img {
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
 .about-img-label {
   position: relative;
   z-index: 1;
@@ -789,6 +794,7 @@ header {
   text-transform: uppercase;
   padding: 10px 20px;
   border-radius: var(--radius);
+  margin: 0 0 20px 20px;
 }
 
 /* ---------- CHECK LIST ---------- */
